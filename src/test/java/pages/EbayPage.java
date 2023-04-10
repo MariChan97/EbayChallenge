@@ -83,12 +83,22 @@ public class EbayPage extends BasePage {
 
         return null;
         }
+
         public void printProductsInAscendent(){
+        navigateTo("https://www.ebay.com/sch/i.html?_from=R40&_nkw=shoes&_sacat=0&Brand=Nike&_dcat=93427&US%2520Shoe%2520Size=10&_sop=16");
         List<WebElement> products = bringMeAllElements(ProductName);
-        Iterator it = products.iterator();
-        while (it.hasNext()){
-           System.out.println(it.next());
+        for (WebElement shoe : products){
+            String shoes = shoe.getText();
+            System.out.println(shoes.replaceAll("Se abre en una ventana nueva", ""));
         }
+    }
+
+    public void printPricesInDescendentForm(){
+        List<WebElement> prices = bringMeAllElements(PriceShoes);
+        for (WebElement price : prices) {
+            System.out.println(price.getText());
         }
+    }
 }
+
 

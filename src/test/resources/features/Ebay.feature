@@ -5,5 +5,5 @@ Feature: Try to buy on Ebay
     When I search for shoes brand puma number ten
     And I print the number of results
     Then I print the name and price from the first five results from minor to major
-    #And Print the products name in ascendent form
-   # And Print the products price in descendent way
+    And Print the products name in ascendent form
+    And Print the products price in descendent form

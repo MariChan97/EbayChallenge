@@ -35,7 +35,12 @@ public class EbaySteps {
     }
     @And("Print the products name in ascendent form")
     public void printInAscendentForm(){
+        ebay.printProductsInAscendent();
+    }
 
+    @And("Print the products price in descendent form")
+    public void PrintPriceInDescendent(){
+    ebay.printPricesInDescendentForm();
     }
 }
 
